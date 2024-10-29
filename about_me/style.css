@@ -3,8 +3,16 @@
 }
 
 body {
-    background-color: #88A4EA;
+    background-image: url('img/bg.png');
     font-family: Helvetica, sans-serif;
+}
+
+p {
+    color: white;
+}
+
+h3 {
+    color: #1C1C1C;
 }
 
 .flexbox {
@@ -42,6 +50,10 @@ body {
     /* grid-gap: 1vw; */
 }
 
+.grid-container p {
+    color: #000;
+}
+
 .collapsible {
     background-color: #eee;
     color: #444;
@@ -77,6 +89,10 @@ body {
     background-color: #f1f1f1;
 }
 
+.content a {
+    text-decoration: none;
+}
+
 .container {
     width: 100%;
     background-color: #ddd;
@@ -91,14 +107,18 @@ body {
 
 .html {width: 80%; background-color: #04AA6D;} /* Зелёный */
 .css {width: 70%; background-color: #2196F3;} /* Синий */
-.js {width: 60%; background-color: #f44336;} /* Красный */
-.python {width: 50%; background-color: #808080;} /* Серый */
+.python {width: 60%; background-color: #808080;} /* Серый */
+.js {width: 50%; background-color: #f44336;} /* Красный */
 
 
 .timeline {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.timeline p {
+    color: #000;
 }
 
 .timeline::after {
@@ -223,5 +243,11 @@ body {
 @media screen and (max-width: 330px) {
     .flexbox img {
         width: 300px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .flexbox img {
+        width: 200px;
     }
 }
