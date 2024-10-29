@@ -240,7 +240,7 @@ h3 {
     }
 }
 
-@media screen and (max-width: 308px) {
+@media screen and (max-width: 310px) {
     .flexbox img {
         width: 200px;
     }
