@@ -236,18 +236,12 @@ h3 {
     }
 
     .flexbox img {
-        width: 400px;
-    }
-}
-
-@media screen and (max-width: 330px) {
-    .flexbox img {
         width: 300px;
     }
 }
 
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 308px) {
     .flexbox img {
-        width: 100px;
+        width: 200px;
     }
 }
