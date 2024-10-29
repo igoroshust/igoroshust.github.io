@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #88A4EA;
+    font-family: Helvetica, sans-serif;
+}
+
+.flexbox {
+    display: flex;
+    flex: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+}
+
+.title {
+    order: 1;
+}
+
+.flexbox img {
+    width: 240px;
+    border-radius: 5px;
+    order: 2;
+
+}
+
+.title {
+    padding: 0px 10px 0px;
+}
+
+.text {
+    padding: 0px 10px 0px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-column: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(1, 50px);
+    /* grid-gap: 1vw; */
+}
+
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible:after {
+    content: '\02795'; /* символ плюса (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+.active:after {
+    content: '\2796'; /* символ минуса (-) */
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.container {
+    width: 100%;
+    background-color: #ddd;
+}
+
+.skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.html {width: 80%; background-color: #04AA6D;} /* Зелёный */
+.css {width: 70%; background-color: #2196F3;} /* Синий */
+.js {width: 60%; background-color: #f44336;} /* Красный */
+.python {width: 50%; background-color: #808080;} /* Серый */
+
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.box {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.material {
+  position: relative;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .box {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .box::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
+
+/* Медиа-запросы */
+
+@media screen and (max-width: 500px) {
+    .skills {
+        text-align: center;
+    }
+
+    .flexbox {
+      flex-direction: column-reverse;
+    }
+
+    .flexbox img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .flexbox img {
+        width: 300px;
+    }
+}
